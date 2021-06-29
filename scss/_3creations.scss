@@ -1,0 +1,74 @@
+section#creations {
+  padding: 3rem 1.5rem;
+
+  text-align: center;
+  h2 {
+    font-size: 2rem;
+  }
+
+  .card {
+    display: block;
+    text-align: left;
+    margin-top: 2rem;
+    position: relative;
+
+    picture img {
+      width: 100%;
+    }
+
+    h3 {
+      position: absolute;
+      bottom: 1rem;
+      left: 1rem;
+      width: 145px;
+      font-size: 1.7rem;
+      color: $white;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 4px;
+      background-image: linear-gradient(to Right, $black, transparent);
+      opacity: 0.6;
+    }
+
+    &:hover,
+    &:focus {
+      transition: all 0.3s ease-in-out;
+
+      h3 {
+        color: $black;
+      }
+
+      &::before {
+        background-image: unset;
+        background-color: $white;
+        opacity: 0.7;
+      }
+
+      &:active {
+        h3 {
+          color: red;
+        }
+      }
+    }
+  }
+
+  button {
+    margin-top: 2rem;
+    padding: 1rem 3rem;
+    font-family: "Alata", sans-serif;
+    font-weight: 400;
+    background-color: transparent;
+    border: 2px solid $black;
+    font-size: 1rem;
+    letter-spacing: 4px;
+    color: $black;
+
+    @include btnHoverActiveEffect;
+  }
+}

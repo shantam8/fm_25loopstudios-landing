@@ -1,13 +1,47 @@
 @import "fonts";
+@import "mixins";
 @import "variables";
 
+@import "1header";
+@import "2leader";
+@import "3creations";
+@import "4footer";
 
 //     font-family: 'Alata', sans-serif; 4
 //   font-family: 'Josefin Sans', sans-serif; 3
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+h1,
+h2,
+h3,
+button {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+p,
+a {
+  font-family: "Alata", sans-serif;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  color: $white;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  &.overflowHidden {
+    overflow: hidden;
+  }
 }

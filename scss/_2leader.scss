@@ -1,0 +1,22 @@
+section#leader {
+  padding: 3rem 1.5rem;
+
+  picture img {
+    width: 100%;
+  }
+
+  .textBox {
+    margin-top: 2rem;
+    text-align: center;
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    p {
+      margin-top: 1rem;
+      line-height: 25px;
+      color: $darkGray;
+    }
+  }
+}

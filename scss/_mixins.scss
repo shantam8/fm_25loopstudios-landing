@@ -1,0 +1,49 @@
+@mixin underlineEffect {
+  &:hover,
+  &:focus {
+    position: relative;
+
+    &::before {
+      margin: 0 auto;
+      width: 24px;
+      display: inline;
+      position: absolute;
+      content: "";
+      left: 0;
+      right: 0;
+      bottom: -6px;
+      height: 2px;
+      background-color: $white;
+    }
+  }
+}
+
+@mixin socialActive {
+  &:active {
+    svg path {
+      fill: red;
+    }
+  }
+}
+
+@mixin linkActive {
+  &:active {
+    color: red;
+  }
+}
+
+@mixin btnHoverActiveEffect{
+    transition: all 0.3s ease-in-out;
+    &:hover,
+    &:focus {
+        cursor: pointer;
+        background-color: $black;
+        color: $white;
+    }
+
+    &:active{
+        transition: all 0s ease-in-out;
+        background-color: red;
+        border-color: red;
+    }
+}

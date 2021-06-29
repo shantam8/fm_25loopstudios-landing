@@ -1,1 +1,329 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap");
+header {
+  position: relative;
+  padding: 2rem 1.5rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr 35rem;
+      grid-template-rows: 1fr 35rem;
+      grid-template-areas: "logo hamburger" "title title";
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url("../images/mobile/image-hero.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+header img {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: logo;
+  width: 150px;
+}
+
+header nav {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: nav;
+  display: none;
+}
+
+header #btnHamburger {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: hamburger;
+  content: "";
+  width: 24px;
+  height: 16px;
+      justify-self: end;
+  background-color: transparent;
+  background-image: url("../images/icon-hamburger.svg");
+  background-position: center;
+  background-size: cover;
+  border: none;
+}
+
+header h1 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: title;
+  padding: 1rem;
+  font-size: 2.5rem;
+  color: white;
+  border: 2px solid white;
+}
+
+header.isOpen {
+  -ms-grid-rows: 1fr 95vh;
+      grid-template-rows: 1fr 95vh;
+      grid-template-areas: "logo hamburger" "nav nav";
+  background-image: none;
+  background-color: black;
+}
+
+header.isOpen nav {
+  display: initial;
+}
+
+header.isOpen nav li a {
+  font-family: "Josefin Sans", sans-serif;
+  font-family: 300;
+  font-size: 2rem;
+  text-transform: uppercase;
+  line-height: 55px;
+}
+
+header.isOpen nav li a:hover, header.isOpen nav li a:focus {
+  position: relative;
+}
+
+header.isOpen nav li a:hover::before, header.isOpen nav li a:focus::before {
+  margin: 0 auto;
+  width: 24px;
+  display: inline;
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 2px;
+  background-color: white;
+}
+
+header.isOpen nav li a:active {
+  color: red;
+}
+
+header.isOpen #btnHamburger {
+  background-image: url(../images/icon-close.svg);
+}
+
+header.isOpen h1 {
+  display: none;
+}
+
+section#leader {
+  padding: 3rem 1.5rem;
+}
+
+section#leader picture img {
+  width: 100%;
+}
+
+section#leader .textBox {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+section#leader .textBox h2 {
+  font-size: 2rem;
+}
+
+section#leader .textBox p {
+  margin-top: 1rem;
+  line-height: 25px;
+  color: #8c8c8c;
+}
+
+section#creations {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+section#creations h2 {
+  font-size: 2rem;
+}
+
+section#creations .card {
+  display: block;
+  text-align: left;
+  margin-top: 2rem;
+  position: relative;
+}
+
+section#creations .card picture img {
+  width: 100%;
+}
+
+section#creations .card h3 {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  width: 145px;
+  font-size: 1.7rem;
+  color: white;
+}
+
+section#creations .card::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 4px;
+  background-image: -webkit-gradient(linear, left top, right top, from(black), to(transparent));
+  background-image: linear-gradient(to Right, black, transparent);
+  opacity: 0.6;
+}
+
+section#creations .card:hover, section#creations .card:focus {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+section#creations .card:hover h3, section#creations .card:focus h3 {
+  color: black;
+}
+
+section#creations .card:hover::before, section#creations .card:focus::before {
+  background-image: unset;
+  background-color: white;
+  opacity: 0.7;
+}
+
+section#creations .card:hover:active h3, section#creations .card:focus:active h3 {
+  color: red;
+}
+
+section#creations button {
+  margin-top: 2rem;
+  padding: 1rem 3rem;
+  font-family: "Alata", sans-serif;
+  font-weight: 400;
+  background-color: transparent;
+  border: 2px solid black;
+  font-size: 1rem;
+  letter-spacing: 4px;
+  color: black;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+section#creations button:hover, section#creations button:focus {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+section#creations button:active {
+  -webkit-transition: all 0s ease-in-out;
+  transition: all 0s ease-in-out;
+  background-color: red;
+  border-color: red;
+}
+
+footer {
+  background-color: black;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+footer img {
+  margin-bottom: 2rem;
+}
+
+footer nav ul li a {
+  line-height: 40px;
+}
+
+footer nav ul li a:hover, footer nav ul li a:focus {
+  position: relative;
+}
+
+footer nav ul li a:hover::before, footer nav ul li a:focus::before {
+  margin: 0 auto;
+  width: 24px;
+  display: inline;
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 2px;
+  background-color: white;
+}
+
+footer nav ul li a:active {
+  color: red;
+}
+
+footer .socialMedia {
+  width: 150px;
+  margin: 0 auto;
+  margin-top: 3rem;
+  padding-bottom: 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer .socialMedia .socialSvg a:hover, footer .socialMedia .socialSvg a:focus {
+  position: relative;
+}
+
+footer .socialMedia .socialSvg a:hover::before, footer .socialMedia .socialSvg a:focus::before {
+  margin: 0 auto;
+  width: 24px;
+  display: inline;
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 2px;
+  background-color: white;
+}
+
+footer .socialMedia .socialSvg a:active svg path {
+  fill: red;
+}
+
+footer p {
+  margin-top: 1rem;
+  color: dimgray;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+button {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+p,
+a {
+  font-family: "Alata", sans-serif;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+li {
+  list-style: none;
+}
+
+body.overflowHidden {
+  overflow: hidden;
+}
+/*# sourceMappingURL=main.css.map */
