@@ -15,9 +15,11 @@ function toggleMobileMenu() {
 }
 
 function closeMobileMenu() {
-  if (document.documentElement.clientWidth >= 640 && document.documentElement.clientWidth <= 660) {
-    header.classList.remove("isOpen");
-    body.classList.remove("overflowHidden");
+  if (document.documentElement.clientWidth >= 640) {
+    if (header.classList.contains("isOpen")) {
+      header.classList.remove("isOpen");
+      body.classList.remove("overflowHidden");
+    }
   }
 }
 
