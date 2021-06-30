@@ -14,9 +14,17 @@ function toggleMobileMenu() {
   }
 }
 
+function closeMobileMenu() {
+  if (document.documentElement.clientWidth == 640) {
+    header.classList.remove("isOpen");
+    body.classList.remove("overflowHidden");
+  }
+}
+
 function init() {
   console.log("Hi");
   btnHamburger.addEventListener("click", toggleMobileMenu);
+  window.addEventListener("resize", closeMobileMenu);
 }
 
 window.onload = init();
