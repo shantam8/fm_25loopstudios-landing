@@ -1,7 +1,8 @@
 section#creations {
-  padding: 3rem 1.5rem;
-
+  padding: 4rem 1.5rem;
   text-align: center;
+  transition: all 0.5s ease-in-out;
+
   h2 {
     font-size: 2rem;
   }
@@ -70,5 +71,96 @@ section#creations {
     color: $black;
 
     @include btnHoverActiveEffect;
+  }
+
+  @media screen and (min-width: 40rem) {
+    padding: 3rem 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto repeat(4, 1fr) auto;
+    grid-template-areas:
+      "title title"
+      "earth arcade"
+      "soccer grid"
+      "above pocket"
+      "curiosity fisheye"
+      "btn btn";
+    gap: 1rem;
+
+    h2 {
+      grid-area: title;
+      align-self: center;
+      justify-self: center;
+    }
+
+    .card {
+      margin-top: 0;
+      &::before {
+        background-image: linear-gradient(to Top, $black, transparent);
+      }
+    }
+
+    a:nth-child(2) {
+      grid-area: earth;
+    }
+    a:nth-child(3) {
+      grid-area: arcade;
+    }
+    a:nth-child(4) {
+      grid-area: soccer;
+    }
+    a:nth-child(5) {
+      grid-area: grid;
+    }
+    a:nth-child(6) {
+      grid-area: above;
+    }
+    a:nth-child(7) {
+      grid-area: pocket;
+    }
+    a:nth-child(8) {
+      grid-area: curiosity;
+    }
+    a:nth-child(9) {
+      grid-area: fisheye;
+    }
+    button {
+      grid-area: btn;
+      margin-top: 0;
+      align-self: center;
+      justify-self: center;
+    }
+  }
+
+  @media screen and (min-width: 50rem) {
+    margin-bottom: 3rem;
+    padding: 3rem 5rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto repeat(3, 1fr);
+    grid-template-areas:
+      "title title title"
+      "earth arcade soccer"
+      "grid above pocket"
+      "curiosity fisheye btn";
+  }
+
+  @media screen and (min-width: 64rem) {
+    padding: 4rem 5rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto 1fr 1fr;
+    grid-template-areas:
+      "title title . btn"
+      "earth arcade soccer grid"
+      "above pocket curiosity fisheye";
+    gap: 2rem;
+
+    h2 {
+      justify-self: left;
+    }
+
+    button {
+      padding: 0.5rem 2rem;
+      justify-self: right;
+    }
   }
 }

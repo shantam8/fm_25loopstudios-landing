@@ -19,4 +19,61 @@ section#leader {
       color: $darkGray;
     }
   }
+
+  @media screen and (min-width: 40rem) {
+    padding: 0;
+    margin: 3rem 4rem;
+  }
+
+  @media screen and (min-width: 64rem) {
+    margin: 4rem 6rem;
+    position: relative;
+
+    picture img {
+      width: 65%;
+    }
+
+    .textBox {
+      position: absolute;
+      right: 0;
+      display: inline-block;
+      bottom: 0;
+      background-color: white;
+      padding-top: 1rem;
+      padding-left: 1rem;
+      text-align: left;
+      width: 453px;
+      height: max-content;
+
+      h2 {
+        font-size: 2.5rem;
+      }
+    }
+  }
+
+  @media screen and (min-width: 65.5rem) {
+    margin: 4rem 8rem;
+    
+    .textBox {
+      padding-left: 3rem;
+      padding-top: 3rem;
+    }
+  }
+
+  @media screen and (min-width: 72rem) {
+    margin: 4rem 9rem;
+
+    .textBox {
+      padding-left: 4rem;
+      padding-top: 4rem;
+    }
+  }
+
+  @media screen and (min-width: 72rem) {
+    margin: 4rem 10rem;
+  }
+
+  @media screen and (min-width: 90rem) {
+    margin: 4rem 13rem;
+  }
 }

@@ -31,4 +31,42 @@ footer {
     margin-top: 1rem;
     color: $veryDarkGray;
   }
+
+  @media screen and (min-width: 50rem) {
+    padding: 3rem 5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "logo social" "nav copyright";
+    gap: 1rem;
+
+    align-items: center;
+
+    img {
+      grid-area: logo;
+      margin: 0;
+    }
+
+    nav {
+      grid-area: nav;
+      max-width: 400px;
+
+      ul {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+
+    .socialMedia {
+      grid-area: social;
+      margin: 0;
+      justify-self: right;
+    }
+
+    p {
+      grid-area: copyright;
+      margin: 0;
+      justify-self: right;
+    }
+  }
 }
